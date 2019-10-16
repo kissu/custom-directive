@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <button @click="toggle = !toggle">toggle me</button>
+    <div v-annoying-background:orange="toggle">yolo</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { AnnoyingBackground } from "./scripts/directive.js";
 
 export default {
-  name: "app",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      toggle: false
+    };
+  },
+  directives: {
+    AnnoyingBackground
   }
 };
 </script>
