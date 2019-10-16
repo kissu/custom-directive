@@ -5,16 +5,16 @@ export const AnnoyingBackground = {
     el.style.backgroundColor = "blue";
   },
   update(el, binding, vnode, old) {
-    let pizza = document.createComment(" ");
+    let nothing = document.createComment(" ");
     if (binding.value) {
       el.style.backgroundColor = binding.arg;
       if (el.parentNode) {
-        // el.parentNode.replaceChild(pizza, el);
+        // el.parentNode.replaceChild(nothing, el);
       }
     } else {
       el.style.backgroundColor = "teal";
-      if (pizza.parentNode) {
-        // pizza.parentNode.replaceChild(el, pizza);
+      if (nothing.parentNode) {
+        // nothing.parentNode.replaceChild(el, nothing);
       }
     }
   }
